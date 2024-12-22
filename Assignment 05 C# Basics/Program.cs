@@ -3,14 +3,15 @@
     internal class Program
     {
 
-        #region example : Q1 ( Function)
+        #region example Q01: Explain the difference between passing (Value type parameters) by value and by reference then write a suitable c# example.
+
         //// Passing By Value
-        //static void SWAP(int x , int y)
+        //static void SWAP(int x, int y)
         //{
         //    int tamp;
-        //    tamp = x ;
+        //    tamp = x;
         //    x = y;
-        //    y = tamp; 
+        //    y = tamp;
         //}
 
         //// Passing By Ref
@@ -27,23 +28,23 @@
         //static int CalculateSumOfDigits(int number)
         //{
         //    string ConvertNumberToString = number.ToString();
-        //    int[] ConvertIntArray = new int[ConvertNumberToString.Length];
+        //    int[] ConvertStringToIntArray = new int[ConvertNumberToString.Length];
 
         //    for (int i = 0; i < ConvertNumberToString.Length; i++)
         //    {
-        //        ConvertIntArray[i] = int.Parse(ConvertNumberToString[i].ToString());
+        //        ConvertStringToIntArray[i] = int.Parse(ConvertNumberToString[i].ToString());
         //    }
 
         //    int Result = 0;
-        //    for (int i = 0; i < ConvertIntArray.Length; i++)
+        //    for (int i = 0; i < ConvertStringToIntArray.Length; i++)
         //    {
-        //        if (ConvertIntArray[i] % 2 != 0) 
+        //        if (ConvertStringToIntArray[i] % 2 != 0)
         //        {
-        //            Result += ConvertIntArray[i]; 
+        //            Result += ConvertStringToIntArray[i];
         //        }
         //    }
 
-        //    return Result; 
+        //    return Result;
         //}
 
         #endregion
@@ -52,14 +53,14 @@
 
         //static string Isparsed(int Number)
         //{
-        //    if(Number <= 1)
+        //    if (Number <= 1)
         //    {
         //        return "false";
         //    }
 
-        //    for (int i = 2; i <= Math.Sqrt( Number) ; i++)
+        //    for (int i = 2; i <= Math.Sqrt(Number); i++)
         //    {
-        //        if( Number % i == 0 )
+        //        if (Number % i == 0)
         //        {
 
         //            return " False";
@@ -75,13 +76,23 @@
 
         //static int CalculateTheFactorial(int n)
         //{
-
-        //    int Result = 1;
-        //    for (int i = 1; i <= n; i++)
+            
+        //        int Result = 1;
+        //    switch (n > 0)
         //    {
-        //        Result*=i;
+        //        case true:
+        //            for (int i = 1; i <= n; i++)
+        //            {
+        //                Result *= i;
+        //            }
+        //            break;
+
+        //        case false:
+        //            Result = 0;
+        //            break;
         //    }
-        //    return Result;
+        //        return Result;
+            
         //}
 
         #endregion
@@ -140,7 +151,22 @@
             #endregion
 
             #region Q20:Write a program in C# Sharp to find the sum of all elements of the array.
-            //int[] Numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 };
+            //Console.Write(" Please Enter The Size Array  : ");
+
+            //bool Flag = int.TryParse(Console.ReadLine(), out int Size);
+            //Console.WriteLine("please Enter the Element Array : ");
+            //int[] Numbers = new int[Size];
+            //for (int i = 0; i < Size; i++)
+            //{
+
+            //    Console.Write($" element {i + 1} :  ");
+            //    int.TryParse(Console.ReadLine(), out int Number);
+
+            //    Numbers[i] = Number;
+
+            //}
+
+            //Console.Clear();
             //int Sum = 0;
 
             //for (int i = 0; i < Numbers.Length; i++)
@@ -152,12 +178,44 @@
             #endregion
 
             #region Q21 :Write a program in C# Sharp to merge two arrays of the same size sorted in ascending order.
-            //int[] Num1 = { 1, 2, 3, 4, 5, 6 };
-            //int[] Num2 = { 7, 8, 9, 10, 11,12 };
+
+            //Console.Write(" Please Enter The Size Array(1)  : ");
+
+            //bool Flag1 = int.TryParse(Console.ReadLine(), out int Size1);
+            //Console.WriteLine("please Enter the Element Array : ");
+            //int[] Num1 = new int[Size1];
+            //for (int i = 0; i < Size1; i++)
+            //{
+
+            //    Console.Write($" element {i + 1} :  ");
+            //    int.TryParse(Console.ReadLine(), out int Number1);
+
+            //    Num1[i] = Number1;
+
+            //}
+
+            //Console.Clear();
+
+            //Console.Write(" Please Enter The Size Array(2)  : ");
+
+            //bool Flag2 = int.TryParse(Console.ReadLine(), out int Size2);
+            //Console.WriteLine("please Enter the Element Array : ");
+            //int[] Num2 = new int[Size2];
+            //for (int i = 0; i < Size2; i++)
+            //{
+
+            //    Console.Write($" element {i + 1} :  ");
+            //    int.TryParse(Console.ReadLine(), out int Number2);
+
+            //    Num2[i] = Number2;
+
+            //}
+
+            //Console.Clear();
 
             //int[] MergeArrays = new int[Num1.Length + Num2.Length];
-            //Array.Copy(Num1,MergeArrays, Num1.Length);
-            //Array.Copy(Num2,0,MergeArrays, Num1.Length, Num2.Length);
+            //Array.Copy(Num1, MergeArrays, Num1.Length);
+            //Array.Copy(Num2, 0, MergeArrays, Num1.Length, Num2.Length);
 
             //Array.Sort(MergeArrays);
             //foreach (int i in MergeArrays)
@@ -170,7 +228,23 @@
             #endregion
 
             #region Q22 : Write a program in C# Sharp to count the frequency of each element of an array
-            //int[] Num = { 1,1,1,2,2,2,3,3,3,2, 3 };    
+
+            //Console.Write(" Please Enter The Size Array : ");
+
+            //bool Flag1 = int.TryParse(Console.ReadLine(), out int Size);
+            //Console.WriteLine("please Enter the Element Array : ");
+            //int[] Num = new int[Size];
+            //for (int i = 0; i < Size; i++)
+            //{
+
+            //    Console.Write($" element {i + 1} :  ");
+            //    int.TryParse(Console.ReadLine(), out int Number);
+
+            //    Num[i] = Number;
+
+            //}      
+
+            //Console.Clear();
 
             //bool[] ProceItem = new bool[Num.Length];
             //for (int i = 0; i < Num.Length; i++)
@@ -182,7 +256,7 @@
             //    {
             //        if (Num[i] == Num[j])
             //        {
-            //        Count++;
+            //            Count++;
             //            ProceItem[j] = true;
             //        }
 
@@ -194,54 +268,85 @@
             #endregion
 
             #region Q23 : Write a program in C# Sharp to find maximum and minimum element in an array
-            //int[] Num = { 8, 5, 10, 4, 2, 6, 7, 1, 9, 3 };
-            //int Max = Num[0];
-            //int Min = Num[0];
 
-            //for (int i = 0; i < Num.Length; i++)
-            //{
-            //    if (Num[i] > Max)
-            //    {
-            //        Max = Num[i];
-            //    }
-            //}
+            // Console.Write(" Please Enter The Size Array : ");
 
-            //for (int j = 0; j < Num.Length; j++)
-            //{
-            //    if (Num[j] < Min)
-            //    {
-            //        Min = Num[j];
-            //    }
-            //}
+            // bool Flag1 = int.TryParse(Console.ReadLine(), out int Size);
+            // Console.WriteLine("please Enter the Element Array : ");
+            // int[] Num = new int[Size];
+            // for (int i = 0; i < Size; i++)
+            // {
 
-            //Console.WriteLine($" Maximum Element  = {Max}");
-            //Console.WriteLine($" Minimum Element  = {Min}");
+            //     Console.Write($" element {i + 1} :  ");
+            //     int.TryParse(Console.ReadLine(), out int Number);
+
+            //     Num[i] = Number;
+
+            // }
+
+            //Console.Clear();
+            // int Max = Num[0];
+            // int Min = Num[0];
+
+            // for (int i = 0; i < Num.Length; i++)
+            // {
+            //     if (Num[i] > Max)
+            //     {
+            //         Max = Num[i];
+            //     }
+            // }
+
+            // for (int j = 0; j < Num.Length; j++)
+            // {
+            //     if (Num[j] < Min)
+            //     {
+            //         Min = Num[j];
+            //     }
+            // }
+
+            // Console.WriteLine($" Maximum Element  = {Max}");
+            // Console.WriteLine($" Minimum Element  = {Min}");
 
 
             #endregion
 
             #region Q24 :Write a program in C# Sharp to find the second largest element in an array.
 
-            //int[] Num = { 8, 5, 10, 4, 2, 6, 7, 1, 9, 3 };
-            //int Max = Num[0];
-            //int SecondMax = int.MinValue;
-            //for (int i = 0; i < Num.Length; i++)
-            //{
-            //    if (Num[i] > Max)
-            //    {
+            // Console.Write(" Please Enter The Size Array : ");
 
-            //        Max = Num[i];
-            //    }
-            //}
+            // bool Flag1 = int.TryParse(Console.ReadLine(), out int Size);
+            // Console.WriteLine("please Enter the Element Array : ");
+            // int[] Num = new int[Size];
+            // for (int i = 0; i < Size; i++)
+            // {
 
-            //for (int i = 0;i < Num.Length; i++)
-            //{
-            //    if (Num[i]>SecondMax&& Num[i]< Max)
-            //    {
-            //        SecondMax= Num[i];
-            //    }
-            //}
-            //Console.WriteLine( $"second largest element= {SecondMax}");
+            //     Console.Write($" element {i + 1} :  ");
+            //     int.TryParse(Console.ReadLine(), out int Number);
+
+            //     Num[i] = Number;
+
+            // }
+
+            //Console.Clear();
+            // int Max = Num[0];
+            // int SecondMax = int.MinValue;
+            // for (int i = 0; i < Num.Length; i++)
+            // {
+            //     if (Num[i] > Max)
+            //     {
+
+            //         Max = Num[i];
+            //     }
+            // }
+
+            // for (int i = 0; i < Num.Length; i++)
+            // {
+            //     if (Num[i] > SecondMax && Num[i] < Max)
+            //     {
+            //         SecondMax = Num[i];
+            //     }
+            // }
+            // Console.WriteLine($"second largest element= {SecondMax}");
 
             #endregion
 
@@ -263,7 +368,7 @@
             //int.TryParse(Console.ReadLine(), out int N);
 
             //int[] num = new int[N];
-            //Console.WriteLine("Enter the elements of the array: m");
+            //Console.WriteLine("Enter the elements of the array: ");
 
             //for (int i = 0; i < N; i++)
             //{
@@ -300,7 +405,7 @@
             ////Note : 
             ////Check the Split Function(Member in String Class) Output will be a Single Console.WriteLine Statement
 
-            //Console.Write( " Please Enter The  Text  :  ");
+            //Console.Write(" Please Enter The  Text  :  ");
             //string? Text = Console.ReadLine();
 
             //string[] Words = Text.Split(' ');
@@ -311,9 +416,13 @@
             #endregion
 
             #region Q27: Write a program to create two multidimensional arrays of same size. Accept value from user and store them in first array. Now copy all the elements of first array on second array and print second array.
-            //Console.WriteLine("Please Enter The Value: ");
-            //int[,] FirstArray = new int[3, 3];
-            //int[,] SecondArray = new int[3, 3];
+            //Console.WriteLine("Please Enter The Value :  ");
+            //Console.Write("Please Enter The Rows :  ");
+            //int.TryParse(Console.ReadLine(), out int Rows);
+            //Console.Write("Please Enter The Columns :");
+            //int.TryParse(Console.ReadLine(), out int Columns);
+            //int[,] FirstArray = new int[Rows, Columns];
+            //int[,] SecondArray = new int[Rows, Columns];
 
 
             //for (int i = 0; i < FirstArray.GetLength(0); i++)
@@ -353,24 +462,42 @@
             //{
             //    for (int j = 0; j < SecondArray.GetLength(1); j++)
             //    {
-            //        Console.WriteLine(SecondArray[i, j]);
+
+
+            //        Console.Write(SecondArray[i, j] + "\t");
             //    }
+            //    Console.WriteLine();
             //}
 
             #endregion
 
             #region Q28 : Write a Program to Print One Dimensional Array in Reverse Order
-            //int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 };
-            //for (int i=numbers.Length-1; i>=0; i--) 
+
+            //Console.Write(" Please Enter The Size Array  : ");
+            //bool Flag = int.TryParse(Console.ReadLine(), out int Size);
+            //Console.WriteLine("please Enter the Element Array : ");
+            //int[] Numbers = new int[Size];
+            //for (int i = 0; i < Size; i++)
             //{
-            //    Console.WriteLine(numbers[i]);
+
+            //    Console.Write($" element {i + 1} :  ");
+            //    int.TryParse(Console.ReadLine(), out int Number);
+
+            //    Numbers[i] = Number;
+
+            //}
+
+            //Console.Clear();
+            //for (int i = Numbers.Length - 1; i >= 0; i--)
+            //{
+            //    Console.WriteLine(Numbers[i]);
             //}
 
             #endregion
 
-            // Function 
+            //// Function 
 
-            #region Q01:  Explain the difference between passing (Value type parameters) by value and by reference then write a suitable c# example.
+            #region Q01: Explain the difference between passing (Value type parameters) by value and by reference then write a suitable c# example.
 
             ////1. Passing By Value 
             //// Modifying a value inside a function does not affect the original value outside the function.
@@ -384,7 +511,7 @@
 
             //// Example
 
-            //int num1 = 3 , num2 = 4 ;
+            //int num1 = 3, num2 = 4;
 
             //// Passing By Value
             //SWAP(num1, num2);//( 3,4)
@@ -405,13 +532,12 @@
 
             #region Q03: Create a function named "IsPrime", which receives an integer number and retuns true if it is prime, or false if it is not .
 
-
             //Console.WriteLine(Isparsed(9));
             #endregion
 
             #region Q04:Create an iterative (non-recursive) function to calculate the factorial of the number specified as parameter .
 
-            //Console.WriteLine(CalculateTheFactorial(5));
+            //Console.WriteLine(CalculateTheFactorial(-1));
 
             #endregion
 
